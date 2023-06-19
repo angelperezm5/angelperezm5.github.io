@@ -5,11 +5,11 @@ window.addEventListener("scroll", function(){
 
 
 window.addEventListener('DOMContentLoaded', function() {
-  
+  /*
   if (window.innerWidth < 512) {
       return; // Sale de la función si el tamaño de la pantalla es inferior a 1050px
   }
-
+*/
   
   var myText = document.getElementById('myText');
   myText.classList.add('typing-animation');
