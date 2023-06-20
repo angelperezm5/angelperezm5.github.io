@@ -169,4 +169,222 @@ header .logo {
 
 
 
+  /* Sobre mi inicio */
+
+#sobremi{
+    padding-top: 100px;
+    height: 100vh;
+}
+
+  .sobre{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 3%;
+
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 3%;
+    position: relative;
+    font-size: 26px;
+    padding-bottom: 20px;
+    color: #FFF;
+}
+
+.titulo::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #FFF;
+    bottom: 0;
+    left: calc(50% - 40px);
+}
+
+.titulo::after {
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    background-color: #000000;
+    border: 4px solid #f9f9f9;
+    left: calc(50% - 12px);
+    bottom: -7px;
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+
+}
+
+.divimgcv{
+    margin-right: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.fotocv{
+    height: 180px;
+    width: 170px;
+}
+
+.parrafoa{
+    font-size: 20px;
+    flex: 1;
+}
+
+.parrafoa .estudiante{
+    text-align: justify;
+    line-height: 26px;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 1130px) {
+
+    .contenedorhab{
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .hardskills,
+    .softskills,
+    .idiomas{
+        display: inline-block !important;
+    }
+
+    .contenedorhab .col-md-4 {
+        width: 100%;
+    }
+    .hardskillstitle{
+        margin-top: 20px;
+    }
+
+    .softskillstitle{
+        margin-top: 100px;
+    }
+
+    .idiomastitle{
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .presentacion {
+      display: flex !important;
+      flex-direction: column;
+    }
+    .divimgcv,
+    .parrafoa {
+      display: inline-block !important;
+    }
+
+
+    .parrafoa h3,
+    .parrafoa p {
+      text-align: center !important;
+    }
+
+    .divimgcv{
+        margin-bottom: 50px;
+        margin-right: 0px !important;
+    }
+
+    .fotocv{
+        height: 250px;
+        width: 240px;
+    }
+
+    #sobremi{
+        padding-top: 20px;
+    }
+
+    .hardskillstitle{
+        margin-top: 20px;
+    }
+
+    .softskillstitle{
+        margin-top: 100px;
+    }
+
+    .idiomastitle{
+        margin-top: 100px;
+    }
+
+    .softskills i, 
+    .softskills span{
+        font-size: 20px;
+    }
+
+}
   
+
+.progress {
+    margin-top: 20px;
+    height: 25px !important; /* Altura de la barra de progreso */
+    width: 100%; /* Anchura de la barra de progreso */
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background-color: #19A7CE !important; /* Color de fondo de la barra de progreso */
+    color: #ffffff; /* Color del texto dentro de la barra de progreso */
+    text-align: center;
+    transition: width 0.3s ease-in-out;
+    animation: progress-animation 4s linear 1;
+  }
+
+  @keyframes progress-animation {
+    0% {
+      width: 0;
+    }
+  }
+
+.softskills i{
+    color: #19A7CE !important;
+}
+
+.idiomas p,h5{
+    color: #000000;
+}
+
+.idiomas img{
+    height: 20px;
+    width: 20px;
+}
+
+
+.idiomas .card{
+    margin-top: 20px;
+}
+
+.bandera-idioma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bandera {
+    width: 20px;
+    height: auto;
+  }
+
+  .cardru:hover {
+    background: linear-gradient(to right, #012169, #fefefe, #cf142b);
+  }
+  
+  .cardesp:hover {
+    background: linear-gradient(to right, #c60b1e, #fbda1a, #c60b1e);
+  }
+  
+  .cardcat:hover {
+    background: linear-gradient(to right, #f2a800, #c60c30, #fbda1a, #c60c30, #fbda1a);
+  }
+  /* Sobre mi final */

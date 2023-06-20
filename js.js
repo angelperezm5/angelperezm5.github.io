@@ -1,3 +1,5 @@
+/* Función para el navbar, cuando se hace scroll se le añade una clase para ponerle un color de fondo. */
+
 window.addEventListener("scroll", function(){
     var header = document.querySelector(".navbar");
     header.classList.toggle("abajo",window.scrollY>0)    
@@ -23,6 +25,9 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+/* Función que te sube para arriba cuando haces click en un botón. */
+
 function scrollFunction() {
     const myButton = document.getElementById('my-button');
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -40,40 +45,42 @@ function scrollFunction() {
   window.addEventListener('scroll', scrollFunction);
   
 
+/* Función para animar barra de progreso. */
 
-  function animateProgressBars() {
-    const progressBars = document.querySelectorAll('.progress-bar');
+function animateProgressBars() {
+  const progressBars = document.querySelectorAll('.progress-bar');
 
-    progressBars.forEach(progressBar => {
-      const targetWidth = parseFloat(progressBar.style.width);
+  progressBars.forEach(progressBar => {
+    const targetWidth = parseFloat(progressBar.style.width);
 
-      let width = 0;
-      let id = setInterval(frame, 40);
+    let width = 0;
+    let id = setInterval(frame, 40);
 
-      function frame() {
-        if (width >= targetWidth) {
-          clearInterval(id);
-        } else {
-          width++;
-          progressBar.style.width = width + '%';
-        }
+    function frame() {
+      if (width >= targetWidth) {
+        clearInterval(id);
+      } else {
+        width++;
+        progressBar.style.width = width + '%';
       }
-    });
-  }
-
-  // Observador de intersección para activar la animación cuando los elementos son visibles
-  const progressBarsContainer = document.querySelector('.container');
-  const progressBarsObserver = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateProgressBars();
-        observer.unobserve(entry.target); // Dejar de observar una vez que los elementos son visibles
-      }
-    });
+    }
   });
+}
 
-  // Agregar el contenedor de las barras de progreso al observador
-  progressBarsObserver.observe(progressBarsContainer);
+// Observador de intersección para activar la animación cuando los elementos son visibles
+const progressBarsContainer = document.querySelector('.container');
+const progressBarsObserver = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateProgressBars(); // Llamar a la función cuando los elementos sean visibles
+      observer.unobserve(entry.target); // Dejar de observar una vez que los elementos son visibles
+    }
+  });
+});
 
-
+// Agregar cada barra de progreso al observador
+const progressBars = document.querySelectorAll('.progress-bar');
+progressBars.forEach(progressBar => {
+  progressBarsObserver.observe(progressBar);
+});
 
