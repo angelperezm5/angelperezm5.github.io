@@ -645,3 +645,8 @@ header .logo {
     }
 }
 
+@media (max-width: 800px) {
+    #portfolio{
+        margin-top: 900px !important;
+    }
+}
