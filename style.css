@@ -707,3 +707,9 @@ header .logo {
         margin-top: 50px !important;
     }
 }
+
+@media (max-width: 800px) {
+    #contactame{
+        margin-top: 900px !important;
+    }
+}
