@@ -650,3 +650,60 @@ header .logo {
         margin-top: 900px !important;
     }
 }
+
+/* Contactame */
+
+
+#contactame{
+    padding-top: 100px;
+    height: 100vh;
+}
+
+.iconoscontact i{
+    color: #FFF;
+    font-size: 50px;
+    margin: 20px;
+}
+
+.iconoscontact i:hover{
+    transform: scale(1.2);
+    color: #19A7CE;
+    transition: transform 1s;
+}
+
+.imgcontactame,.cardcontactame{
+    height: 600px;
+    box-shadow: 0 0 10px #FFF;
+    padding: 20px;
+}
+
+.imgcontactame{
+    background-image: url("imgs/yo_contacto.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgcontactame img{
+    width: 75%;
+    height: 100%;
+}
+
+.cardcontactame img:hover{
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+@media (max-width: 1199px) {
+    #contactame{
+        margin-top: 900px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .formulariocontact{
+        margin-top: 50px !important;
+    }
+}
