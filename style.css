@@ -173,7 +173,6 @@ header .logo {
 
 #sobremi{
     padding-top: 100px;
-    height: 100vh;
 }
 
   .sobre{
@@ -393,7 +392,6 @@ header .logo {
 /* Apartado Trayectoria */
 #trayectoria{
     padding-top: 50px;
-    height: 100vh;
 }
 
 .education-section {
@@ -479,19 +477,6 @@ header .logo {
 */
 
   @media (max-width: 1568px) {
-    .padretrayectoria {
-      display: flex !important;
-      flex-direction: column;
-    }
-    .grupoeducacion,
-    .grupoexperiencia {
-      display: inline-block !important;
-    }
-
-    .padretrayectoria .col-md-6 {
-        width: auto !important;
-    }
-
     .titleeducacion{
         margin-top: 60px;
     }
@@ -499,22 +484,19 @@ header .logo {
         margin-top: 120px;
     }
     #trayectoria{
-        margin-top: 150px;
+        margin-top: 60px;
     }
 }
 
-@media (max-width: 1130px) {
-    #trayectoria{
-        margin-top: 1150px;
+@media (min-width: 1568px) {
+    .col-xxxl-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
     }
-}
+  }
+
 
 @media (max-width: 767px) {
-    #trayectoria{
-        margin-top: 1750px !important;
-    }
-
-
     .timeline:before {
         height: auto;
         top: 0;
@@ -558,22 +540,12 @@ header .logo {
       }
 }
 
-@media (max-width: 501px) {
-    #trayectoria{
-        margin-top: 1500px;
-    }
-}
 
 
   /* Portfolio */
 
 #portfolio{
     padding-top: 100px;
-    height: 100vh;
-}
-
-#portfolio{
-    position: relative;
 }
 
 #portfolio .proyectos-container{
@@ -631,32 +603,19 @@ header .logo {
 }
 
 
-@media (max-width: 1568px) {
-    #portfolio{
-        margin-top: 800px !important;
-    }
-}
-
-
-
 @media (max-width: 1199px) {
     .proyecto1, .proyecto2, .proyecto3{
         margin-top: 60px !important;
     }
 }
 
-@media (max-width: 800px) {
-    #portfolio{
-        margin-top: 900px !important;
-    }
-}
 
 /* Contactame */
 
 
 #contactame{
-    padding-top: 100px;
-    height: 100vh;
+    padding-top: 50px;
+    margin-bottom: 100px;
 }
 
 .iconoscontact i{
@@ -672,7 +631,7 @@ header .logo {
 }
 
 .imgcontactame,.cardcontactame{
-    height: 600px;
+    height: 100%;
     box-shadow: 0 0 10px #FFF;
     padding: 20px;
 }
@@ -696,11 +655,7 @@ header .logo {
     transition: transform 1s;
 }
 
-@media (max-width: 1199px) {
-    #contactame{
-        margin-top: 900px !important;
-    }
-}
+
 
 @media (max-width: 767px) {
     .formulariocontact{
@@ -708,8 +663,16 @@ header .logo {
     }
 }
 
-@media (max-width: 800px) {
-    #contactame{
-        margin-top: 1000px !important;
+@media (max-width: 1199px) {
+    .imgcontactame{
+        height: 700px;
     }
+
+    .cardcontactame{
+        margin-top: 50px;
+    }
+}
+
+.botonenviar button{
+    background-color: #FFF;
 }

@@ -243,7 +243,7 @@
 
     <div class="container-fluid text-center">
         <div class="row padretrayectoria">
-            <div class="col-md-6 grupoeducacion">
+            <div class="col-xxxl-6 grupoeducacion">
                 <h2 class="mb-5 titleeducacion">Educación</h2>
 
                 <div class="education-section">
@@ -275,7 +275,7 @@
             </div>
 
 
-            <div class="col-md-6 grupoexperiencia">
+            <div class="col-xxxl-6 grupoexperiencia">
                 <h2 class="mb-5 titleexperiencia">Experiencia</h2>
 
                 <div class="education-section">
@@ -398,15 +398,34 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-xl-6">
                 <div class="imgcontactame"></div>
             </div>
-            <div class="col-md-6 formulariocontact">
+            <div class="col-xl-6 formulariocontact">
                 <div class="cardcontactame">
                     <h1>Si has llegado hasta aquí quizás estés interesado en contactarme...</h1>
-                    <a href="mailto:destinatario@ejemplo.com">
-                        <h5 class="text-center mt-5"><img src="imgs/correo.png" alt="correo electrónico"></h5>
-                    </a>
+
+                    <form method="POST" action="/submit-form">
+                        <div class="row">
+                          <div class="col-md-6"> <br>
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" id="nombre" class="form-control" placeholder="Ej: Raúl">
+                          </div>
+                          <div class="col-md-6"> <br>
+                            <label for="apellidos" class="form-label">Apellidos</label>
+                            <input type="text" id="apellidos" class="form-control" placeholder="Ej: Pérez Rodríguez">
+                          </div>
+                        </div>
+                      
+                        <div> <br>
+                          <label for="mensaje" class="form-label">Mensaje</label>
+                          <textarea id="mensaje" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                        </div>
+                      
+                        <div class="mt-3 botonenviar">
+                            <button type="submit" class="btn">Enviar</button>
+                          </div>
+                      </form>
                     <p class="mt-5">Puedes mandarme un correo y estaré encantado de responderte.</p>
                     <p>Sino siempre tienes mis redes sociales disponibles.</p>
                     <div class="iconoscontact text-center mt-5">
@@ -424,11 +443,6 @@
 
 
 </section>
-
-  <br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
   <button class="fas fa-arrow-up" onclick="goToTop()" id="my-button" title="Ir arriba"></button>
 
