@@ -250,6 +250,7 @@ header .logo {
         flex-direction: column;
     }
 
+
     .hardskills,
     .softskills,
     .idiomas{
@@ -270,6 +271,15 @@ header .logo {
     .idiomastitle{
         margin-top: 100px;
     }
+
+    .softskills i{
+        font-size: 25px !important;
+    }
+
+    .softskills span{
+        font-size: 20px !important;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -316,7 +326,7 @@ header .logo {
 
     .softskills i, 
     .softskills span{
-        font-size: 20px;
+        font-size: 15px;
     }
 
 }
@@ -333,7 +343,7 @@ header .logo {
 
   .progress-bar {
     height: 100%;
-    background-color: #19A7CE !important; /* Color de fondo de la barra de progreso */
+    background-color: #A7A7A7  !important; /* Color de fondo de la barra de progreso */
     color: #ffffff; /* Color del texto dentro de la barra de progreso */
     text-align: center;
     transition: width 0.3s ease-in-out;
@@ -348,6 +358,9 @@ header .logo {
 
 .softskills i{
     color: #FFF !important;
+}
+.softskills span{
+    font-size: 18px;
 }
 
 .idiomas p,h5{
@@ -583,6 +596,10 @@ header .logo {
     opacity: 0;
 }
 
+.tarjetas:hover h2 {
+    display: none;
+}
+
 .tarjetas h2 {
     position: absolute;
     top: 50%;
@@ -618,6 +635,18 @@ header .logo {
     margin-bottom: 100px;
 }
 
+.cardcontactame{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.cardcontactame a{
+    text-decoration: none;
+}
+
+
 .iconoscontact i{
     color: #FFF;
     font-size: 50px;
@@ -626,12 +655,11 @@ header .logo {
 
 .iconoscontact i:hover{
     transform: scale(1.2);
-    color: #19A7CE;
-    transition: transform 1s;
+    color: #A7A7A7;
 }
 
 .imgcontactame,.cardcontactame{
-    height: 100%;
+    min-height: 650px;
     box-shadow: 0 0 10px #FFF;
     padding: 20px;
 }
@@ -649,16 +677,10 @@ header .logo {
     width: 75%;
     height: 100%;
 }
-
-.cardcontactame img:hover{
-    transform: scale(1.1);
-    transition: transform 1s;
-}
-
-
+  
 
 @media (max-width: 767px) {
-    .formulariocontact{
+    .contactocorreo{
         margin-top: 50px !important;
     }
 }
@@ -673,6 +695,8 @@ header .logo {
     }
 }
 
-.botonenviar button{
-    background-color: #FFF;
+@media (max-width: 1199px) {
+    .imgcontactame{
+        margin-top: 40px;
+    }
 }
