@@ -142,7 +142,7 @@ header .logo {
     font-size: 2em;
     font-weight: bold;
 }
-/*
+
 @media (max-width: 768px) {
     .bannerimgdesk{
         display: flex;
@@ -155,7 +155,7 @@ header .logo {
         background-position: center center;
       }
 }
-*/
+
 #my-button {
     display: none;
     position: fixed;
